@@ -10,8 +10,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   
-  // Replace with your OpenWeather API key
-  const OPENWEATHER_API_KEY = '9f817d37e5b3fccebbcaf858754f7f19';
+  // Get OpenWeather API key from environment variable
+  const OPENWEATHER_API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
   const handleLocationSearch = async (locationName) => {
     setLoading(true);
